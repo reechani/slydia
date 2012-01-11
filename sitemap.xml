@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : sitemap.xml
+    Created on : den 10 januari 2012, 13:13
+    Author     : Jane
+    Description:
+        Purpose of the document follows.
+-->
+ 
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>http://www.student.bth.se/~jast10/dbwebb2/lydia/</loc> 
+        <changefreq>monthly</changefreq> 
+    </url>
+    <url>
+        <loc>http://www.student.bth.se/~jast10/dbwebb2/lydia/admin/</loc> 
+        <changefreq>monthly</changefreq> 
+    </url>
+    <url>
+        <loc>http://www.student.bth.se/~jast10/dbwebb2/lydia/index</loc> 
+        <changefreq>monthly</changefreq>
+    </url>
+    <url>
+        <loc>http://www.student.bth.se/~jast10/dbwebb2/lydia/mumintrollet</loc> 
+        <changefreq>monthly</changefreq> 
+    </url>
+    <url>
+        <loc>http://www.student.bth.se/~jast10/dbwebb2/lydia/page/show/1</loc> 
+        <changefreq>monthly</changefreq> 
+    </url>
+</urlset>
