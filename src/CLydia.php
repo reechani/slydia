@@ -193,4 +193,14 @@ class CLydia implements ISingleton {
 		return $html;
 	}
 
+	public function getJS() {
+		$ly = &$this;
+		$html = "";
+		$js = $ly->cfg["site"]["head"]["js"];
+		foreach($js as $link) {
+			$html .= "<script src='$link' ></script>";
+		}
+		return $html;
+	}
+
 }

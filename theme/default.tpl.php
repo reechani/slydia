@@ -4,6 +4,7 @@
 		<?php echo $ly->getStylesheetHTML(); ?>
 		<?php echo $ly->getScriptsHTML(); ?>
 		<?php echo $ly->getMeta(); ?>
+		<?php echo $ly->getJS(); ?>
 		<style>
 			div#header-wrapper nav ul {
 				list-style: none;
