@@ -55,9 +55,11 @@ class CLydia implements ISingleton {
 		$ly = &$this;
 		$menu = $this->cfg["site"]["header"]["main-menu"];
 		// Add pages from datbase to the menu
-		$res = $ly->db->select("Pages");
-		while ($row = $res->fetch_object()) {
-			$menu["items"][] = array("name" => $row->title, "url" => ("page/show/" . $row->id), "class" => "", "admin" => false);
+		$res = $ly->db->select(TBL_PREFIX . "Pages");
+		if ($res) {
+			while ($row = $res->fetch_object()) {
+				$menu["items"][] = array("name" => $row->title, "url" => ("page/show/" . $row->id), "class" => "", "admin" => false);
+			}
 		}
 		$current = $ly->req->controller;
 		if ($ly->req->controller == "page" && $ly->req->action == "show") {
