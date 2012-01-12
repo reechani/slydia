@@ -41,7 +41,7 @@
 
 			<!-- HEADER -->
 			<div id="header-wrapper" class="container">
-				<h1><?php echo $ly->cfg["site"]["header"]["site-title"] . " - " . $ly->template->title; ?></h1>
+				<h1><?php echo $ly->cfg["site"]["header"]["site-title"]; ?></h1>
 				<?php echo $menu; ?>
 			</div>
 

@@ -28,7 +28,7 @@ class CLydia implements ISingleton {
 		$ly->template = new stdClass();
 		$ly->template->regions = new stdClass();
 		$this->template->tplfile = 'default';
-		$this->template->title = 'default title';
+		$this->template->title = $this->cfg["site"]["head"]["title"];
 		$this->template->stylesheet = $this->cfg["baseurl"] . "/style/blueprint/screen.css";
 	}
 
