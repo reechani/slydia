@@ -4,6 +4,7 @@ define("DB_HOST", "localhost");
 define("DB_USER", "");
 define("DB_PASSWORD", "");
 define("DB_DATABASE", "");
+define("TBL_PREFIX", "");
 
 /**
  * Site configuration, this file is change by user per site.

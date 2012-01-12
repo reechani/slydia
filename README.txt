@@ -51,7 +51,9 @@ This is what you will need to to after you have the files in place:
 
 Further, you need a MySQL-database, and be able to connect to it from your website directory.
 In mysql, create a database for you site, and remember to add this to the config-file.
-Use that database to create the following tables:
+Use that database to create the following tables, but remember to add 
+your chosen prefix! (Example, TBL_PREFIX = "sly1_" then tablename 
+sly1_Pages)
     Pages
         id:int (PK, auto increment)
         content:text
