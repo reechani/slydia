@@ -9,7 +9,7 @@ class CCtrl4Page implements IController {
 		if (isset($_SESSION["user"])) {
 			$html = "<hr /><h2>All pages</h2>";
 // show pages
-			$res = $ly->db->select("Pages");
+			$res = $ly->db->select(TBL_PREFIX . "Pages");
 			if (empty($res)) {
 				$html .= "Tables do not exist. <a href='" . $ly->cfg["baseurl"] . "/db/install/" . "'>Install</a> first.";
 			} else {
@@ -46,9 +46,9 @@ class CCtrl4Page implements IController {
 					}
 				}
 				if ($id != "") {
-					$ly->db->update("Pages", $row, "id = $id");
+					$ly->db->update(TBL_PREFIX . "Pages", $row, "id = $id");
 				} else {
-					$ly->db->insert("Pages", $row);
+					$ly->db->insert(TBL_PREFIX . "Pages", $row);
 				}
 //			$ly->db->set("Pages", $_POST);
 				// save page to database
@@ -57,7 +57,7 @@ class CCtrl4Page implements IController {
 				$content = "";
 				$id = "";
 				if ($page != false) {
-					$res = $ly->db->select("Pages", "id = $page");
+					$res = $ly->db->select(TBL_PREFIX . "Pages", "id = $page");
 					$row = $res->fetch_object();
 					$title = $row->title;
 					$content = $row->content;
@@ -85,7 +85,7 @@ EOD;
 	public function show($page) {
 		global $ly;
 
-		$res = $ly->db->select("Pages", "id = $page");
+		$res = $ly->db->select(TBL_PREFIX . "Pages", "id = $page");
 		$row = $res->fetch_object();
 
 		$html = "<h2>" . $row->title . "</h2>";

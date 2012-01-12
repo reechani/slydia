@@ -34,7 +34,7 @@ EOD;
 		$user = isset($_POST['user']) ? $_POST['user'] : '';
 		$password = isset($_POST['password']) ? $_POST['password'] : '';
 		// get user table from db
-		$res = $ly->db->select("Users", "username = '$user'");
+		$res = $ly->db->select(TBL_PREFIX . "Users", "username = '$user'");
 		if ($res->num_rows > 0) {
 			$row = $res->fetch_object();
 			// is there a user with that name/pass
