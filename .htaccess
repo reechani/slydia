@@ -1,5 +1,5 @@
 RewriteEngine on
-RewriteBase /~jast10/dbwebb2/lydia/
+RewriteBase /~user/folder/slydia/
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
