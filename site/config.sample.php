@@ -51,13 +51,13 @@ $ly->cfg['controllers'] = array(
 $ly->cfg['site'] = array(
 	"head" => array(
 		"stylesheet" => array(
-			"screen" => $ly->cfg["baseurl"] . "/style/blueprint/screen.css"
+			$ly->cfg["baseurl"] . "/style/blueprint/screen.css"
 		),
 		"meta" => array(
 			"charset" => "utf-8"
 		),
 		"js" => array(
-			//"src" => ""
+			//""
 		),
 		"title" => "Default title"
 	),

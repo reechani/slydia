@@ -2,7 +2,6 @@
 	<head>
 		<title><?php echo $ly->template->title; ?></title>
 		<?php echo $ly->getStylesheetHTML(); ?>
-		<?php echo $ly->getScriptsHTML(); ?>
 		<?php echo $ly->getMeta(); ?>
 		<?php echo $ly->getJS(); ?>
 		<style>

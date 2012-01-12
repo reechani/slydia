@@ -29,7 +29,6 @@ class CLydia implements ISingleton {
 		$ly->template->regions = new stdClass();
 		$this->template->tplfile = 'default';
 		$this->template->title = $this->cfg["site"]["head"]["title"];
-		$this->template->stylesheet = $this->cfg["baseurl"] . "/style/blueprint/screen.css";
 	}
 
 	/**
@@ -170,17 +169,23 @@ class CLydia implements ISingleton {
 
 	public function getStylesheetHTML() {
 		$ly = &$this;
-		return "<link rel='stylesheet' media='screen' type='text/css' href='" . $ly->template->stylesheet . "'/>";
-	}
-
-	public function getScriptsHTML() {
-		$ly = &$this;
 		$html = "";
-		foreach ($ly->cfg["site"]["head"]["js"] as $script) {
-			$html .= "<script type='" . $script["type"] . "' src='" . $script["src"] . "'></script>";
+		$css = $ly->cfg["site"]["head"]["stylesheet"];
+		foreach($css as $style) {
+			$html .= "<link rel='stylesheet' type='text/css' href='$style' />";
 		}
 		return $html;
+//		return "<link rel='stylesheet' media='screen' type='text/css' href='" . $ly->template->stylesheet . "'/>";
 	}
+
+//	public function getScriptsHTML() {
+//		$ly = &$this;
+//		$html = "";
+//		foreach ($ly->cfg["site"]["head"]["js"] as $script) {
+//			$html .= "<script type='" . $script["type"] . "' src='" . $script["src"] . "'></script>";
+//		}
+//		return $html;
+//	}
 
 	public function getMeta() {
 		$ly = &$this;
