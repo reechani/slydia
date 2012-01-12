@@ -1,0 +1,12 @@
+RewriteEngine on
+RewriteBase /~jast10/dbwebb2/lydia/
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule (.*) index.php/$1 [NC,L]
+
+<files config.php>
+order allow,deny
+deny from all
+</files>
