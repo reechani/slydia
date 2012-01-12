@@ -57,7 +57,7 @@ $ly->cfg['site'] = array(
 			"charset" => "utf-8"
 		),
 		"js" => array(
-		//array("type" => "text/javascript", "src" => "")
+			//"src" => ""
 		),
 		"title" => "Default title"
 	),
