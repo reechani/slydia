@@ -22,9 +22,7 @@ class CCtrl4Database implements IController {
 		$ly->template->regions->main = "Installing database tables...";
 
 //		$ly->db->addCreateTable(TBL_PREFIX . "Pages");
-//		$ly->db->addCreateCol(TBL_PREFIX . "Pages", "id", 
-"int", 
-"auto_increment primary key");
+//		$ly->db->addCreateCol(TBL_PREFIX . "Pages", "id", "int", "auto_increment primary key");
 
 		$table = Array(
 			"name" => TBL_PREFIX . "Pages",
