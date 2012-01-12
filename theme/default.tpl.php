@@ -3,6 +3,7 @@
 		<title><?php echo $ly->template->title; ?></title>
 		<?php echo $ly->getStylesheetHTML(); ?>
 		<?php echo $ly->getScriptsHTML(); ?>
+		<?php echo $ly->getMeta(); ?>
 		<style>
 			div#header-wrapper nav ul {
 				list-style: none;

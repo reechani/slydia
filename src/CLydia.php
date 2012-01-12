@@ -182,4 +182,15 @@ class CLydia implements ISingleton {
 		return $html;
 	}
 
+	public function getMeta() {
+		$ly = &$this;
+		$html = "<meta ";
+		$meta = $ly->cfg["site"]["head"]["meta"];
+		foreach ($meta as $key => $value) {
+			$html .= "$key = '$value' ";
+		}
+		$html .= "/>";
+		return $html;
+	}
+
 }
