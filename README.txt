@@ -83,7 +83,6 @@ CREATE TABLE Users(
 Then add a user to the Users-table. This will be your admin-login.
 You can add as many admin-logins as you wish.
 
-
 To create pages, this is what you do:
 
 1. Go to /site/src/

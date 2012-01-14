@@ -25,7 +25,6 @@ EOD;
 		global $ly;
 		$ly->template->regions->main = "<h1>Debuginformation</h1><p>The content of \$ly is:</p><pre>" . print_r($ly, true) . "</pre>";
 	}
-
 }
 
 // End of class 

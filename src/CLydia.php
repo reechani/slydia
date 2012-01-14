@@ -57,7 +57,9 @@ class CLydia implements ISingleton {
 		$res = $ly->db->select(TBL_PREFIX . "Pages");
 		if ($res) {
 			while ($row = $res->fetch_object()) {
-				$menu["items"][] = array("name" => $row->title, "url" => ("page/show/" . $row->id), "class" => "", "admin" => false);
+				if ($row->title != 'index') {
+					$menu["items"][] = array("name" => $row->title, "url" => ("page/show/" . $row->id), "class" => "", "admin" => false);
+				}
 			}
 		}
 		$current = $ly->req->controller;
@@ -171,7 +173,7 @@ class CLydia implements ISingleton {
 		$ly = &$this;
 		$html = "";
 		$css = $ly->cfg["site"]["head"]["stylesheet"];
-		foreach($css as $style) {
+		foreach ($css as $style) {
 			$html .= "<link rel='stylesheet' type='text/css' href='$style' />";
 		}
 		return $html;
@@ -202,7 +204,7 @@ class CLydia implements ISingleton {
 		$ly = &$this;
 		$html = "";
 		$js = $ly->cfg["site"]["head"]["js"];
-		foreach($js as $link) {
+		foreach ($js as $link) {
 			$html .= "<script src='$link' ></script>";
 		}
 		return $html;

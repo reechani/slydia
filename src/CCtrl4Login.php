@@ -41,7 +41,6 @@ EOD;
 			if ($row->pass == sha1("{$row->username}$password")) {
 				$html .= "<div class='success'>Login successful. Welcome $user.</div>";
 			}
-			// start session
 			// save sessions vars
 			$_SESSION["id"] = $row->id;
 			$_SESSION["user"] = $row->username;
