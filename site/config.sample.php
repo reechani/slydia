@@ -57,13 +57,13 @@ $ly->cfg['site'] = array(
 			"charset" => "utf-8"
 		),
 		"js" => array(
-			//"scripts/example.js"
+			//$ly->cfg["baseurl"] . "/scripts/example.js"
 		),
 		"title" => "Default title"
 	),
 	"header" => array(
 		"logo" => "",
-		"site-title" => "Lydia",
+		"site-title" => "SLydia",
 		"main-menu" => array(
 			"items" => array(
 				array("name" => "Home", "url" => "index", "class" => "", "admin" => false),

@@ -1,6 +1,6 @@
-LYDIA
+SLYDIA
 
-Document last changed: 2012-01-14
+Document last changed: 2012-01-23
 ------------------------
 
 Classes:
@@ -107,6 +107,8 @@ Then add a user to the Users-table. This will be your admin-login.
 You can add as many admin-logins as you wish.
 
 -------------------------------------
+HOW TO: CREATE PAGES
+
 To create pages, this is what you do:
 
 1. Go to /site/src/
@@ -178,3 +180,14 @@ fixed pages and later edit them. HTML is allowed, PHP however is not supported.
 
 The textarea of the form is resizeable, so for usabilty, resize it as you feel 
 best to edit with comfort.
+
+----------------------------------------------
+
+HOW TO: ADD STYLESHEETS AND JAVASCRIPT
+
+Stylesheets and any JS-files are all added globaly. This means that all files
+you add to your config are loaded on all pages. You can add any number you wish.
+
+They are loaded trough config.php from the variable $ly->cfg['site']. There you
+have the stylesheet-array and the js-array. Add the full link to the files, and
+if it's local file remember to add the baseurl of the site.
