@@ -16,7 +16,7 @@ class CCtrl4Page implements IController {
 				$html .= "<p><a href='" . $ly->cfg["baseurl"] . "/page/edit/' title='New page' >New page</a></p>";
 				$html .= "<table><tr><th>ID</th><th>Title</th></tr>";
 				while ($row = $res->fetch_object()) {
-					$html .= "<tr><td><a href='" . $ly->cfg["baseurl"] . "/page/edit/" . $row->id . "'>" . $row->id . "</td><td>" . $row->title . "</td></tr>";
+					$html .= "<tr><td><a href='" . $ly->cfg["baseurl"] . "/page/edit/" . $row->id . "'>" . $row->id . "</td><td>" . html_entity_decode($row->title) . "</td></tr>";
 				}
 				$html .= "</table>";
 			}
@@ -59,8 +59,8 @@ class CCtrl4Page implements IController {
 				if ($page != false) {
 					$res = $ly->db->select(TBL_PREFIX . "Pages", "id = $page");
 					$row = $res->fetch_object();
-					$title = $row->title;
-					$content = $row->content;
+					$title = html_entity_decode($row->title);
+					$content = html_entity_decode($row->content);
 					$id = $row->id;
 				}
 				$html = "<hr /><h2>Edit</h2>";
@@ -88,8 +88,8 @@ EOD;
 		$res = $ly->db->select(TBL_PREFIX . "Pages", "id = $page");
 		$row = $res->fetch_object();
 
-		$html = "<h2>" . $row->title . "</h2>";
-		$ly->template->title = $row->title;
+		$html = "<h2>" . html_entity_decode($row->title) . "</h2>";
+		$ly->template->title = html_entity_decode($row->title);
 		$html .= html_entity_decode($row->content);
 
 		$ly->template->regions->main = $html;
