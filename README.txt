@@ -167,7 +167,7 @@ go to /page ("Page"-link is shown in the menu when logged in). Here you can add
 fixed pages and later edit them. HTML is allowed, PHP however is not supported.
 
 1. Login
-2. Go to /page
+2. Go to "Page"
 3a. Click "New page"
     Form is shown, fill it out.
     Save.
