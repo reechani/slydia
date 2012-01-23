@@ -51,7 +51,8 @@ $ly->cfg['controllers'] = array(
 $ly->cfg['site'] = array(
 	"head" => array(
 		"stylesheet" => array(
-			$ly->cfg["baseurl"] . "/style/blueprint/screen.css"
+			$ly->cfg["baseurl"] . "/style/blueprint/screen.css",
+			$ly->cfg["baseurl"] . "/style/style.css"
 		),
 		"meta" => array(
 			"charset" => "utf-8"

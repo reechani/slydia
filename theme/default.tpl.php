@@ -4,33 +4,6 @@
 		<?php echo $ly->getStylesheetHTML(); ?>
 		<?php echo $ly->getMeta(); ?>
 		<?php echo $ly->getJS(); ?>
-		<style>
-			div#header-wrapper nav ul {
-				list-style: none;
-				background: #999999;
-				border-bottom-style: solid;
-				border-color: #222222;
-				border-width: 3px;
-			}
-			div#header-wrapper nav ul li {
-				display: inline-block;
-				padding: 3px;
-			}
-
-			div#header-wrapper a {
-				color: #222222;
-				padding: 2px;
-			}
-
-			div#header-wrapper li.current {
-				padding: 3px;
-				background: #222222;
-			}
-
-			div#header-wrapper li.current a {
-				color: #eeeeee; 
-			}
-		</style>
 	</head>
 	<body>
 		<div id="full-wrapper">
