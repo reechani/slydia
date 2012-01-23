@@ -1,6 +1,6 @@
 LYDIA
 
-Document last changed: 2012-01-10
+Document last changed: 2012-01-14
 ------------------------
 
 Classes:
@@ -33,27 +33,49 @@ HOW TO
 Download or pull from git to your webserver.
 This is what you will need to to after you have the files in place:
 
-- Copy/move config.sample.php to config.php (copy is the best in case you need to reset)
+- Copy/move config.sample.php to config.php (copy is the best in case you need
+    to reset)
 - Copy/move robots.sample.txt to robots.txt
 
 - Open the config.php
     - At the top you have the database-login info. Fill this out.
     - Change the timezone-value
     - Fill in the baseurl of your site
-    - At the bottom you have site-info. Fill out what you feel necessary for your site.
+    - At the bottom you have site-info. Fill out what you feel necessary for
+        your site.
 
 - Open file .htaccess
+- Create one if it does not exist
     - Replace RewriteBase, or remove it if your site is not in a subfolder
+    - Should look something like this:
+            RewriteEngine on
+            RewriteBase /~user/folder/slydia/
+
+            RewriteCond %{REQUEST_FILENAME} !-f
+            RewriteCond %{REQUEST_FILENAME} !-d
+
+            RewriteRule (.*) index.php/$1 [NC,L]
+
+            <files config.php>
+            order allow,deny
+            deny from all
+            </files>
+
 
 - Open file robots.txt
     - Replace the site-portion of the adress to the sitemap, leave /sitemap.xml
 
+- Open sitemap.xml
+    - Replace the adresses in <loc></loc> with your site adress, but leave the
+        end parts. (/admin, /index)
 
-Further, you need a MySQL-database, and be able to connect to it from your website directory.
-In mysql, create a database for you site, and remember to add this to the config-file.
-Use that database to create the following tables, but remember to add 
-your chosen prefix! (Example, TBL_PREFIX = "sly1_" then tablename 
-sly1_Pages)
+
+Further, you need a MySQL-database, and be able to connect to it from your
+website directory. In mysql, create a database for you site, and remember to add
+this to the config-file. Use that database to create the following tables, but
+remember to add your chosen prefix! (Example, TBL_PREFIX = "sly1_" then
+tablename sly1_Pages)
+    
     Pages
         id:int (PK, auto increment)
         content:text
@@ -63,6 +85,7 @@ sly1_Pages)
         id:int (PK, auto)
         username:char(32) (Unique)
         pass:varchar(128)
+
 
 For those of you that are new to MySQL, this is the syntax to use:
 
@@ -83,6 +106,7 @@ CREATE TABLE Users(
 Then add a user to the Users-table. This will be your admin-login.
 You can add as many admin-logins as you wish.
 
+-------------------------------------
 To create pages, this is what you do:
 
 1. Go to /site/src/

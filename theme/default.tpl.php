@@ -41,7 +41,8 @@
 
 			<!-- HEADER -->
 			<div id="header-wrapper" class="container">
-				<h1><?php echo $ly->cfg["site"]["header"]["site-title"]; ?></h1>
+				<?php echo isset($ly->cfg["site"]["header"]["site-title"]) ? "<h1>{$ly->cfg["site"]["header"]["site-title"]}</h1>" : "" ; ?>
+				<?php echo isset($ly->cfg["site"]["header"]["logo"]) ? "<img src='{$ly->cfg["site"]["header"]["logo"]}' />" : "" ; ?>
 				<?php echo $menu; ?>
 			</div>
 

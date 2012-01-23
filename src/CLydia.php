@@ -58,7 +58,7 @@ class CLydia implements ISingleton {
 		if ($res) {
 			while ($row = $res->fetch_object()) {
 				if ($row->title != 'index') {
-					$menu["items"][] = array("name" => $row->title, "url" => ("page/show/" . $row->id), "class" => "", "admin" => false);
+					$menu["items"][] = array("name" => html_entity_decode($row->title), "url" => ("page/show/" . $row->id), "class" => "", "admin" => false);
 				}
 			}
 		}

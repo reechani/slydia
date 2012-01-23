@@ -7,26 +7,20 @@
     Description:
         Purpose of the document follows.
 -->
- 
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    <!--  created with Free Online Sitemap Generator www.xml-sitemaps.com 
+  --> 
     <url>
-        <loc>http://www.student.bth.se/~jast10/dbwebb2/lydia/</loc> 
-        <changefreq>monthly</changefreq> 
+        <loc>http://www.student.bth.se/~jast10/dbwebb2/slydia/</loc> 
+        <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>http://www.student.bth.se/~jast10/dbwebb2/lydia/admin/</loc> 
-        <changefreq>monthly</changefreq> 
+        <loc>http://www.student.bth.se/~jast10/dbwebb2/slydia/admin/</loc> 
+        <changefreq>never</changefreq>
     </url>
     <url>
-        <loc>http://www.student.bth.se/~jast10/dbwebb2/lydia/index</loc> 
-        <changefreq>monthly</changefreq>
-    </url>
-    <url>
-        <loc>http://www.student.bth.se/~jast10/dbwebb2/lydia/mumintrollet</loc> 
-        <changefreq>monthly</changefreq> 
-    </url>
-    <url>
-        <loc>http://www.student.bth.se/~jast10/dbwebb2/lydia/page/show/1</loc> 
-        <changefreq>monthly</changefreq> 
+        <loc>http://www.student.bth.se/~jast10/dbwebb2/slydia/index</loc> 
+        <changefreq>weekly</changefreq>
     </url>
 </urlset>
