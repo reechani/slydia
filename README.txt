@@ -116,7 +116,8 @@ To create pages, this is what you do:
      // class begins here
         class CCtrl4News implements IController {
             /**
-             * Implementing interface IController. All controllers must have an index action.
+             * Implementing interface IController. All controllers must have an
+             * index action.
              */
             public function Index() {
                 global $ly;
@@ -129,7 +130,51 @@ To create pages, this is what you do:
     Anything you want to show on that page, you add into the index-function.
     The default template has several regions you can put content into, and these
     regions are saved into $ly->template->regions->REGIONNAME
-    Example, for main content, put content as a string into $ly->template->regions->main
+    Example, for main content, put content as a string into
+    $ly->template->regions->main
     
     These regions are available:
-        LIST OF REGIONS IN DEFAULT
+        - top
+        - promoted
+        - main
+        - sidebar
+        - triptych1
+        - triptych2
+        - triptych3
+			
+	(The header and footer are both fixed and set in config.php)
+
+    The title is set through $ly->template->title.
+
+4. To activate the class, go to config.php and enter the class and controller as
+    into the $ly->cfg['controllers']-array. Just follow the way the already
+    enabled controllers have been added. Once saved the site can now access your
+    controller-class and show you the content of it.
+
+5. To add a link to your controller into the main navigation of the site, go
+    again to config.php. In $ly->cfg['site']['header'] you have the main-menu
+    items. Follow the way the already existing items are added. For example, to
+    add "News"-link add this to the array:
+        array("name" => "News", "url" => "news", "class" => "", "admin" => false)
+    Remember that the links are shown in the order they are displayed in the
+    array. All pages added to the database trough Page will come after these
+    links.
+
+
+The alternative way to add pages, which does not give you as much flexibilty as
+through controllers, is to login as admin (the user you hopefully created) and
+go to /page ("Page"-link is shown in the menu when logged in). Here you can add
+fixed pages and later edit them. HTML is allowed, PHP however is not supported.
+
+1. Login
+2. Go to /page
+3a. Click "New page"
+    Form is shown, fill it out.
+    Save.
+3b. Click a page-id
+    Form is shown, with content of the page
+    Edit as you please.
+    Save.
+
+The textarea of the form is resizeable, so for usabilty, resize it as you feel 
+best to edit with comfort.
