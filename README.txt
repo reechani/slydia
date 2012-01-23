@@ -136,7 +136,6 @@ To create pages, this is what you do:
     $ly->template->regions->main
     
     These regions are available:
-        - top
         - promoted
         - main
         - sidebar
